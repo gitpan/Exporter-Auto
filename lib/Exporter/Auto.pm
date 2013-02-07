@@ -2,7 +2,7 @@ package Exporter::Auto;
 use strict;
 use warnings;
 use 5.008005;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Sub::Identify qw(stash_name);
 use B::Hooks::EndOfScope;
@@ -54,6 +54,9 @@ I'm tired to push function names to @EXPORT. Perl5 should add functions automati
 Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>
 
 =head1 SEE ALSO
+
+This module uses magical L<B::Hooks::EndOfScope>.
+If you think this module is too clever, please try L<Module::Functions> instead.
 
 =head1 LICENSE
 

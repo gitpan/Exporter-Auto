@@ -19,6 +19,9 @@ AUTHOR
     Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>
 
 SEE ALSO
+    This module uses magical B::Hooks::EndOfScope. If you think this module
+    is too clever, please try Module::Functions instead.
+
 LICENSE
     Copyright (C) Tokuhiro Matsuno <TOKUHIROM @ GMAIL COM
 
