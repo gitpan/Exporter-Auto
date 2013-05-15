@@ -2,7 +2,7 @@ package Exporter::Auto;
 use strict;
 use warnings;
 use 5.008005;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Sub::Identify qw(stash_name);
 use B::Hooks::EndOfScope;
@@ -15,7 +15,8 @@ sub import {
     unshift @{"${klass}::ISA"}, 'Exporter';
 
     on_scope_end {
-        while (my ($k, $v) = each %{"${klass}::"}) {
+        my %hash = %{"${klass}::"};
+        while (my ($k, $v) = each %hash) {
             next if $k =~ /^(?:BEGIN|CHECK|END)$/;
             next if $k =~ /^_/;
             next unless *{"${klass}::${k}"}{CODE};

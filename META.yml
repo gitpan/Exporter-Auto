@@ -1,13 +1,15 @@
 ---
 abstract: 'Export public functions automatically.'
 author:
-  - 'Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>'
+  - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>'
 build_requires:
   Test::More: 0.98
 configure_requires:
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Minilla/v0.4.2, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -15,16 +17,26 @@ meta-spec:
 name: Exporter-Auto
 no_index:
   directory:
+    - t
+    - xt
     - inc
+    - share
+    - eg
+    - examples
+    - author
 provides:
   Exporter::Auto:
     file: lib/Exporter/Auto.pm
-    version: 0.02
+    version: 0.03
 requires:
   B::Hooks::EndOfScope: 0
   Sub::Identify: 0
   parent: 0
   perl: 5.008005
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.02
+  bugtracker: https://github.com/tokuhirom/Exporter-Auto/issues
+  homepage: https://github.com/tokuhirom/Exporter-Auto
+  repository: git://github.com/tokuhirom/Exporter-Auto.git
+version: 0.03
+x_contributors:
+  - 'tokuhirom <tokuhirom@gmail.com>'
